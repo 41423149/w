@@ -156,20 +156,23 @@ img.add_border {
 <p data-end="461" data-start="442">在 HTML加上：</p>
 <div>
 <div class="syntaxhighlighter html" id="highlighter_747157">
-<table border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td class="gutter">
-<div class="line number1 index0 alt2">1</div>
-</td>
-<td class="code">
-<div class="container">
-<div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">script</code> <code class="html color1">type</code><code class="html plain">=</code><code class="html string">"text/javascript"</code> <code class="html color1">src</code><code class="html plain">=</code><code class="html string">"https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"&gt;&lt;/script&gt;</pre>
+<p data-end="461" data-start="442"><strong>(2) 編寫 Python 腳本</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_909775">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;script type="text/python"&gt;
+from browser import document, html
+ 
+def say_hello(event):
+    document["output"].text = "Hello, Brython!"
+ 
+document["myButton"].bind("click", say_hello)
+&lt;/script&gt;
+</pre>
 </div>
-</td>
-</tr>
-</tbody>
-</table>
+</div>
+<p data-end="461" data-start="442">這裡<span> </span><code data-end="830" data-start="808">document["myButton"]</code><span> </span>就是對應 HTML 按鈕元素。</p>
 </div>
 </div><br />學習心得報告 << <a href='學習心得報告.html'>Previous</a> <a href='W3.html'>Next</a> >> W3</div>
         
