@@ -144,7 +144,30 @@ img.add_border {
         </header>
     <div id="tipue_search_content">學習心得報告 << <a href='學習心得報告.html'>Previous</a> <a href='W7.html'>Next</a> >> W7<br /><h1>W10</h1>
 <p><strong>如何在瀏覽器中模擬機器人作動？</strong></p>
-<p><strong>模擬物理機器人動作</strong></p><br />學習心得報告 << <a href='學習心得報告.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
+<p><strong>模擬物理機器人動作</strong></p>
+<p data-end="183" data-start="139">如果目標是「機器人動作模擬」，瀏覽器環境主要是做<strong data-end="176" data-start="163">三維或二維動畫模擬</strong>，常用工具有：</p>
+<ul data-end="529" data-start="185">
+<li data-end="357" data-start="185">
+<p data-end="238" data-start="187"><strong data-end="207" data-start="187">Three.js + WebGL</strong><br data-end="210" data-start="207"/>可用於在瀏覽器中建模機器人關節、骨架和運動軌跡。</p>
+<ul data-end="357" data-start="241">
+<li data-end="284" data-start="241">
+<p data-end="284" data-start="243">可以用<span> </span><code data-end="269" data-start="247">THREE.SkeletonHelper</code><span> </span>來模擬機器人的骨架運動。</p>
+</li>
+<li data-end="336" data-start="287">
+<p data-end="336" data-start="289">配合動畫或物理引擎（如<span> </span><code data-end="312" data-start="301">Cannon.js</code><span> </span>或<span> </span><code data-end="324" data-start="315">Ammo.js</code>）可以模擬力學反應。</p>
+</li>
+<li data-end="357" data-start="339">
+<p data-end="357" data-start="341">適合教學、視覺化、原型設計。</p>
+</li>
+</ul>
+</li>
+<li data-end="422" data-start="359">
+<p data-end="422" data-start="361"><strong data-end="395" data-start="361">Blockly / Scratch + JavaScript</strong><br data-end="398" data-start="395"/>可做簡單的關節控制模擬，用於教育或概念驗證。</p>
+</li>
+<li data-end="529" data-start="424">
+<p data-end="529" data-start="426"><strong data-end="454" data-start="426">Gazebo / ROS + WebSocket</strong><br data-end="457" data-start="454"/>如果你要真實的控制機器人模型，可以把 ROS 模擬環境（Gazebo）和瀏覽器連接，用 WebSocket 控制機器人，瀏覽器顯示動畫。</p>
+</li>
+</ul><br />學習心得報告 << <a href='學習心得報告.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
         
     <!-- footer -->
       <div class="container">
