@@ -2,6 +2,7 @@
         <head>
         <title>cp2025_hw</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,24 +142,65 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='學習心得報告.html'>Next</a> >> 學習心得報告<br /><h1>About</h1>
-<p>課程名稱: 計算機程式</p>
-<p>個人倉儲：<a href="https://github.com/41423149/w">https://github.com/41423149/w</a></p>
-<p>個人網頁：<a href="https://41423149.github.io/w/content/index.html">https://41423149.github.io/w/content/index.html</a></p>
-<p>程式操作影片：<a href="https://www.youtube.com/watch?v=UEk7Pq-pG70  課程評分:">https://www.youtube.com/watch?v=UEk7Pq-pG70</a></p>
-<p>課程評分:</p>
-<p style="padding-left: 30px;"><span style="background-color: #ffff00;">學習心得報告 (60%)</span> - MS Teams 線上參與，<span style="background-color: #ccffcc;">6人一組</span>每三週發表學習心得。</p>
-<p style="padding-left: 60px;">w3、w7、w10、w14、w17、w18</p>
-<p style="padding-left: 60px;">學習心得報告主題:</p>
-<p style="padding-left: 60px;">w3: 什麼是 git, GitHub, gist 與 cmsimde? 如何使用這些工具？為什麼要使用這些工具？ (<a href="https://mde.tw/cp2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/71ff1c69dd233e6a5a83dd60997950de/raw/b4134dc3724f9c6aa1de7534a74f298288de0fa5/round_dot_move.py">動態模擬</a>)</p>
-<p style="padding-left: 60px;">w7: Brython 是什麼？如何在瀏覽器配置 Brython 環境？ Brython 能做什麼？ (<a href="https://mde.tw/cp2025/content/Brython.html">Brython</a>, <a href="https://mde.tw/cp2025/content/Robot_ex.html">Examples</a>)</p>
-<p style="padding-left: 60px;">w10: 如何在瀏覽器中模擬機器人作動？ (<a href="https://mde.tw/cp2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/58fed8bd2f5be98a6456a8dcae512011/raw/4019adba4ee4be19c35982d835bad8e7d83a7b2f/brython_robot4_ex1.py">機器人作動</a>)</p>
-<p style="padding-left: 60px;">w14: 在瀏覽器中模擬機器人作動的目的是什麼？ (<a href="./../downloads/otto_robot.7z">otto_robot.7z</a>, <a href="https://mde.tw/cad2025/content/Homework.html">Plotter</a>, <a href="./../downloads/open_duck_mini.7z">open_duck_mini.7z</a> ,<a href="https://webots.cloud/AcTNYs0">https://webots.cloud/AcTNYs0</a>)</p>
-<p style="padding-left: 60px;">w17 (<span style="background-color: #ccffcc;">1b 採 Youtube 影片簡報</span>): 計算機程式課程學到了什麼？</p>
-<p style="padding-left: 60px;">w18: 課程總結</p>
-<p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (40%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得。</p>
-<p style="padding-left: 60px;">w9 期中自評、w18 期末自評</p>
-<br /> <a href='學習心得報告.html'>Next</a> >> 學習心得報告</div>
+    <div id="tipue_search_content">W14 << <a href='W14.html'>Previous</a> <a href='W7.html'>Next</a> >> W7<br /><h1>W10</h1>
+<p><strong>如何在瀏覽器中模擬機器人作動？</strong></p>
+<p><strong>模擬物理機器人動作</strong></p>
+<p data-end="183" data-start="139">如果目標是「機器人動作模擬」，瀏覽器環境主要是做<strong data-end="176" data-start="163">三維或二維動畫模擬</strong>，常用工具有：</p>
+<ul data-end="529" data-start="185">
+<li data-end="357" data-start="185">
+<p data-end="238" data-start="187"><strong data-end="207" data-start="187">Three.js + WebGL</strong><br data-end="210" data-start="207"/>可用於在瀏覽器中建模機器人關節、骨架和運動軌跡。</p>
+<ul data-end="357" data-start="241">
+<li data-end="284" data-start="241">
+<p data-end="284" data-start="243">可以用<span> </span><code data-end="269" data-start="247">THREE.SkeletonHelper</code><span> </span>來模擬機器人的骨架運動。</p>
+</li>
+<li data-end="336" data-start="287">
+<p data-end="336" data-start="289">配合動畫或物理引擎（如<span> </span><code data-end="312" data-start="301">Cannon.js</code><span> </span>或<span> </span><code data-end="324" data-start="315">Ammo.js</code>）可以模擬力學反應。</p>
+</li>
+<li data-end="357" data-start="339">
+<p data-end="357" data-start="341">適合教學、視覺化、原型設計。</p>
+</li>
+</ul>
+</li>
+<li data-end="422" data-start="359">
+<p data-end="422" data-start="361"><strong data-end="395" data-start="361">Blockly / Scratch + JavaScript</strong><br data-end="398" data-start="395"/>可做簡單的關節控制模擬，用於教育或概念驗證。</p>
+</li>
+<li data-end="529" data-start="424">
+<p data-end="529" data-start="426"><strong data-end="454" data-start="426">Gazebo / ROS + WebSocket</strong><br data-end="457" data-start="454"/>如果你要真實的控制機器人模型，可以把 ROS 模擬環境（Gazebo）和瀏覽器連接，用 WebSocket 控制機器人，瀏覽器顯示動畫。</p>
+</li>
+</ul>
+<p><strong data-end="539" data-start="531">實務思路</strong><span>：</span></p>
+<ol data-end="634" data-start="541">
+<li data-end="578" data-start="541">
+<p data-end="578" data-start="544">定義骨架與關節（Degrees of Freedom, DOF）</p>
+</li>
+<li data-end="599" data-start="579">
+<p data-end="599" data-start="582">用物理引擎模擬重力、摩擦、碰撞</p>
+</li>
+<li data-end="621" data-start="600">
+<p data-end="621" data-start="603">寫控制邏輯（如 PID 控制器）</p>
+</li>
+<li data-end="634" data-start="622">
+<p data-end="634" data-start="625">渲染到瀏覽器中</p>
+</li>
+</ol>
+<p><strong>2️⃣ 模擬軟體機器人（瀏覽器自動化）</strong></p>
+<p data-end="682" data-start="665">如果你想讓「機器人自動操作網頁」：</p>
+<ul data-end="1085" data-start="684">
+<li data-end="923" data-start="684">
+<p data-end="732" data-start="686"><strong data-end="709" data-start="686">JavaScript + DOM 操作</strong><br data-end="712" data-start="709"/>瀏覽器本身就能模擬點擊、滾動、輸入：</p>
+<div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary">
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span><span><span class="hljs-comment"></span></span></span></code></div>
+</div>
+</li>
+<li data-end="1033" data-start="925">
+<p data-end="1033" data-start="927"><strong data-end="953" data-start="927">Puppeteer / Playwright</strong><br data-end="956" data-start="953"/>Node.js 環境下可以遠端操控瀏覽器，模擬點擊、滾動、填表、截圖等。<br data-end="997" data-start="994"/>適合自動化測試或爬蟲，但不完全在瀏覽器中執行，需要 Node.js。</p>
+</li>
+<li data-end="1085" data-start="1035">
+<p data-end="1085" data-start="1037"><strong data-end="1048" data-start="1037">瀏覽器擴充插件</strong><br data-end="1051" data-start="1048"/>比如 Tampermonkey，可以用腳本自動化瀏覽器操作。</p>
+</li>
+</ul>
+<p><span></span></p>
+<br />W14 << <a href='W14.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
         
     <!-- footer -->
       <div class="container">

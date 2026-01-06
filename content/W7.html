@@ -2,6 +2,7 @@
         <head>
         <title>cp2025_hw</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,24 +142,77 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='學習心得報告.html'>Next</a> >> 學習心得報告<br /><h1>About</h1>
-<p>課程名稱: 計算機程式</p>
-<p>個人倉儲：<a href="https://github.com/41423149/w">https://github.com/41423149/w</a></p>
-<p>個人網頁：<a href="https://41423149.github.io/w/content/index.html">https://41423149.github.io/w/content/index.html</a></p>
-<p>程式操作影片：<a href="https://www.youtube.com/watch?v=UEk7Pq-pG70  課程評分:">https://www.youtube.com/watch?v=UEk7Pq-pG70</a></p>
-<p>課程評分:</p>
-<p style="padding-left: 30px;"><span style="background-color: #ffff00;">學習心得報告 (60%)</span> - MS Teams 線上參與，<span style="background-color: #ccffcc;">6人一組</span>每三週發表學習心得。</p>
-<p style="padding-left: 60px;">w3、w7、w10、w14、w17、w18</p>
-<p style="padding-left: 60px;">學習心得報告主題:</p>
-<p style="padding-left: 60px;">w3: 什麼是 git, GitHub, gist 與 cmsimde? 如何使用這些工具？為什麼要使用這些工具？ (<a href="https://mde.tw/cp2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/71ff1c69dd233e6a5a83dd60997950de/raw/b4134dc3724f9c6aa1de7534a74f298288de0fa5/round_dot_move.py">動態模擬</a>)</p>
-<p style="padding-left: 60px;">w7: Brython 是什麼？如何在瀏覽器配置 Brython 環境？ Brython 能做什麼？ (<a href="https://mde.tw/cp2025/content/Brython.html">Brython</a>, <a href="https://mde.tw/cp2025/content/Robot_ex.html">Examples</a>)</p>
-<p style="padding-left: 60px;">w10: 如何在瀏覽器中模擬機器人作動？ (<a href="https://mde.tw/cp2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/58fed8bd2f5be98a6456a8dcae512011/raw/4019adba4ee4be19c35982d835bad8e7d83a7b2f/brython_robot4_ex1.py">機器人作動</a>)</p>
-<p style="padding-left: 60px;">w14: 在瀏覽器中模擬機器人作動的目的是什麼？ (<a href="./../downloads/otto_robot.7z">otto_robot.7z</a>, <a href="https://mde.tw/cad2025/content/Homework.html">Plotter</a>, <a href="./../downloads/open_duck_mini.7z">open_duck_mini.7z</a> ,<a href="https://webots.cloud/AcTNYs0">https://webots.cloud/AcTNYs0</a>)</p>
-<p style="padding-left: 60px;">w17 (<span style="background-color: #ccffcc;">1b 採 Youtube 影片簡報</span>): 計算機程式課程學到了什麼？</p>
-<p style="padding-left: 60px;">w18: 課程總結</p>
-<p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (40%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得。</p>
-<p style="padding-left: 60px;">w9 期中自評、w18 期末自評</p>
-<br /> <a href='學習心得報告.html'>Next</a> >> 學習心得報告</div>
+    <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='W3.html'>Next</a> >> W3<br /><h1>W7</h1>
+<p><strong>Brython 是什麼</strong></p>
+<p><strong>全名</strong>： Browser Python</p>
+<p><strong data-end="202" data-start="196">目標</strong>：讓 Python 直接在瀏覽器執行，取代 JavaScript 來操作前端。</p>
+<p><strong data-end="252" data-start="246">特點</strong>：</p>
+<p>完整支援 Python 3 語法（大部分標準庫，但不包含操作系統、檔案 I/O 等 Node.js 專用功能）</p>
+<p>可以直接操控 HTML DOM、CSS、事件，像用 JS 一樣</p>
+<p>適合快速原型、教學、互動程式</p>
+<p><strong>在瀏覽器配置 Brython 環境</strong></p>
+<p data-end="421" data-start="406">其實非常簡單，基本上只要三步：</p>
+<p><strong>(1) 引入 Brython</strong></p>
+<p data-end="461" data-start="442">在 HTML加上：</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_747157">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"&gt;&lt;/script&gt;</pre>
+<p data-end="461" data-start="442"><strong>(2) 編寫 Python 腳本</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_909775">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;script type="text/python"&gt;
+from browser import document, html
+ 
+def say_hello(event):
+    document["output"].text = "Hello, Brython!"
+ 
+document["myButton"].bind("click", say_hello)
+&lt;/script&gt;
+</pre>
+</div>
+</div>
+<p data-end="461" data-start="442">這裡<span> </span><code data-end="830" data-start="808">document["myButton"]</code><span> </span>就是對應 HTML 按鈕元素。</p>
+<p data-end="461" data-start="442"><strong>(3) 啟動 Brython</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_721139"></div>
+<div class="syntaxhighlighter html">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;body onload="brython()"&gt;
+    &lt;button id="myButton"&gt;點我&lt;/button&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+</div>
+</div>
+<p><strong>Brython 能做什麼</strong></p>
+<ol data-end="1322" data-start="1028">
+<li data-end="1076" data-start="1028">
+<p data-end="1056" data-start="1031"><strong data-end="1054" data-start="1031">操作 DOM / HTML / CSS</strong></p>
+<p data-end="1076" data-start="1062">動態修改內容、樣式、顯示動畫</p>
+</li>
+<li data-end="1109" data-start="1077">
+<p data-end="1090" data-start="1080"><strong data-end="1088" data-start="1080">事件處理</strong></p>
+<p data-end="1109" data-start="1096">點擊、滑鼠、鍵盤、拖曳事件</p>
+</li>
+<li data-end="1181" data-start="1110">
+<p data-end="1124" data-start="1113"><strong data-end="1122" data-start="1113">繪圖和動畫</strong></p>
+<p data-end="1181" data-start="1130">搭配<span> </span><code data-end="1143" data-start="1133">&lt;canvas&gt;</code><span> </span>或<span> </span><code data-end="1167" data-start="1146">browser.html.CANVAS</code><span> </span>做 2D/簡單 3D 動畫</p>
+</li>
+<li data-end="1218" data-start="1182">
+<p data-end="1197" data-start="1185"><strong data-end="1195" data-start="1185">簡單網路請求</strong></p>
+<p data-end="1218" data-start="1203">AJAX / fetch 請求</p>
+</li>
+<li data-end="1270" data-start="1219">
+<p data-end="1236" data-start="1222"><strong data-end="1234" data-start="1222">算法、邏輯、模擬</strong></p>
+<p data-end="1270" data-start="1242">像物理模擬、運動學計算、數據處理，都可以在瀏覽器直接執行</p>
+</li>
+<li data-end="1322" data-start="1271">
+<p data-end="1287" data-start="1274"><strong data-end="1285" data-start="1274">教育、原型驗證</strong></p>
+<p data-end="1322" data-start="1293">適合在網頁上做互動式教學或快速原型，不必安裝 Python</p>
+</li>
+</ol>
+</div>
+</div>
+<br />W10 << <a href='W10.html'>Previous</a> <a href='W3.html'>Next</a> >> W3</div>
         
     <!-- footer -->
       <div class="container">
